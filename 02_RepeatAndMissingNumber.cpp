@@ -9,6 +9,23 @@
  *    b. Use a hash set to identify the repeated element.
  * 4. Calculate missing = totalSum - (actualSum - repeated).
  * 5. Return the repeated and missing numbers.
+
+ intuition:
+    - The repeated number will be the one that appears more than once in the grid.
+    - The missing number will be the one that is not present in the grid.
+
+Approach:
+    - Initialize repeated and missing to -1.
+    - Calculate the expected sum of numbers from 1 to n*n using the formula: totalSum = (n^2 * (n^2 + 1)) / 2.
+    - Traverse the grid:
+        - Keep track of the actual sum of elements.
+        - Use a hash set to identify the repeated element.
+    - Calculate missing = totalSum - (actualSum - repeated).
+    - Return the repeated and missing numbers.
+
+    complexity:
+        - Time: O(n^2)
+        - Space: O(n^2)
  */
 #include <iostream>
 #include <vector>

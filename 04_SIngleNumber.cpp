@@ -5,6 +5,21 @@
  * 1. Initialize result to 0.
  * 2. Traverse the array and XOR each element with the result.
  * 3. Return the result.
+
+ intuition:
+     XOR of a number with itself is 0.
+     XOR of a number with 0 is the number itself.
+     Since every element appears twice except for one, XORing all elements cancels out the pairs.
+    The remaining element is the one that appears only once.
+
+    Approach:
+        - Initialize result to 0.
+        - Traverse the array and XOR each element with the result.
+        - Return the result.
+
+        complexity:
+            - Time: O(n)
+            - Space: O(1)
  */
 #include <iostream>
 #include <vector>

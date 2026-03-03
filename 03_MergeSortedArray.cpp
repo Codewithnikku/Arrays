@@ -1,5 +1,25 @@
 /*
  * Problem Statement: Merge two sorted arrays nums1 and nums2 into nums1.
+ * 
+ * intuition:
+ *     - We can merge the two arrays in-place by using a three-pointer approach.
+ *     - We start from the end of both arrays and compare the elements.
+ *     - We place the larger element at the end of nums1 and decrement the corresponding pointer.
+ *     - We continue this process until we have merged all elements from nums2 into nums1.
+ * 
+Approach:
+    - Initialize three pointers:
+        - i at the end of elements in nums1 (m-1).
+        - j at the end of elements in nums2 (n-1).
+        - idx at the end of nums1 (m+n-1).
+    - Compare elements at i and j from end:
+        - Place the larger element at nums1[idx] and decrement the corresponding pointer.
+    - Copy any remaining elements from nums2 to nums1.
+
+    complexity:
+        - Time: O(m+n)
+        - Space: O(1)
+
  * Algorithm: Three-pointer Merge (from end to start)
  * Pseudocode:
  * 1. Initialize three pointers:
