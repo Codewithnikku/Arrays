@@ -39,3 +39,30 @@ int main() {
     return 0;
 }
 
+/*
+Leetcode: 74. Search a 2D Matrix
+Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right.
+The first integer of each row is greater than the last integer of the previous row.
+ 
+Intuition:
+    We need to search for a target value in a sorted 2D matrix.
+    We can treat the matrix as a sorted 1D array and apply binary search.
+    We need to map the mid index back to 2D coordinates to access the matrix elements.
+    
+Approach steps:
+    Treat the matrix as a sorted 1D array of size m*n.
+    Set low = 0 and high = m*n - 1.
+    While low <= high:
+        Calculate mid index and map it back to 2D: row = mid / n, col = mid % n.
+        Compare matrix[row][col] with target.
+        If match, return true; else adjust low/high.
+
+        If matrix[row][col] < target, set low = mid + 1.
+        Else, set high = mid - 1.
+    Return false if not found.
+
+    Complexity:
+        - Time: O(log(m*n))
+        - Space: O(1)
+*/

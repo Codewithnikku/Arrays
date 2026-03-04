@@ -75,3 +75,28 @@ int main(){
     }
     return 0;
 }
+
+/*
+Leetcode: 18. 4Sum
+Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+0 <= a, b, c, d < n
+a, b, c, and d are distinct.
+nums[a] + nums[b] + nums[c] + nums[d] == target
+You may return the answer in any order.
+
+Intuition:
+    - We need to find all unique quadruplets that sum up to the target value.
+    - We can use a similar approach to the 3Sum problem by fixing two numbers and using two pointers to find the other two numbers.
+    - We can sort the array to apply pruning and skip duplicate elements.
+
+Approach steps:
+    - Sort the array.
+    - Nested loops with pointers i and j (to fix first two numbers).
+    - Use two pointers p and q for the remaining two numbers.
+    - Apply pruning (min/max checks) to skip unnecessary iterations.
+    - Skip duplicate elements at each level to ensure unique quadruplets.
+
+Complexity:
+    - Time: O(n^3)
+    - Space: O(1)
+*/

@@ -43,3 +43,27 @@ int main() {
   }
   return 0;
 }
+
+
+/*
+Leetcode: 56. Merge Intervals
+Write a function to merge overlapping intervals.
+
+Intuition:
+We need to merge overlapping intervals.
+If an interval overlaps with the last merged interval, we need to update the end time of the last merged interval.
+If an interval does not overlap with the last merged interval, we need to add it to the merged intervals.
+
+
+Approach:
+    Sort the intervals based on start times.
+    Push the first interval to mergedIntervals.
+    Traverse from the second interval:
+        If current interval overlaps with the last in mergedIntervals (start <= end), update the end time of the last interval.
+        Else, push current interval to mergedIntervals.
+    Return mergedIntervals.
+
+    Complexity:
+        - Time: O(nlogn)
+        - Space: O(n)3
+*/

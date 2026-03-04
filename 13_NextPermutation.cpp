@@ -41,3 +41,24 @@ int main() {
     }
     return 0;
 }
+
+/*
+Leetcode: 31. Next Permutation
+Write a function to find the next lexicographically greater permutation of a vector of integers.
+If no such permutation exists, return the vector sorted in ascending order. 
+
+Intuition:
+    - We need to find the next lexicographically greater permutation of the vector.
+    - If no such permutation exists, we need to return the vector sorted in ascending order.
+
+Approach steps:
+    step1: Find the first decreasing element nums[i] from the end.
+    step2: If such i exists, find the first element nums[j] from the end such that nums[j] > nums[i].
+    step3: Swap nums[i] and nums[j].
+    step4: Reverse the subarray after index i (from i+1 to end).
+
+    complexity:
+        - Time: O(n)
+        - Space: O(1)
+
+*/
